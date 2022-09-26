@@ -10,9 +10,14 @@ import SC6 from "./components/SC6";
 import SC7 from "./components/SC7";
 import SC8 from "./components/SC8";
 
+/* ThemeProvider를 활용해 props 설정하기 */
+const Wrapper = styled.div`
+  background-color: ${(props) => props.theme.bgColor};
+`;
+
 function App() {
   return (
-    <>
+    <Wrapper>
       <Basic />
       <SC1 />
       <SC2 />
@@ -22,7 +27,7 @@ function App() {
       <SC6 />
       <SC7 />
       <SC8 />
-    </>
+    </Wrapper>
   );
 }
 export default App;
